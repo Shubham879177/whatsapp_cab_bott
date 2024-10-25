@@ -1,5 +1,5 @@
 from django.urls import path
 
-from whatsapp_bott.bott import views
+from . import views
 
 path('',views.index, name="index")
