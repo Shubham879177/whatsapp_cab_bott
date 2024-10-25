@@ -18,10 +18,9 @@ from django.urls import path, include
 
 from django.contrib import admin
 
-from whatsapp_bott.bott import views
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),  # Define a view for the homepage
+    path('bott/', include('bott.urls')),
+   
 ]
