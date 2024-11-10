@@ -47,9 +47,9 @@ class WhatsappBott:
         message = client.messages.create(
         from_='whatsapp:+14155238886',
         content_sid=f'{content_sid}',
-        content_variables={'1':f"{content_variables}"},
+        content_variables=content_variables,
         to=f'whatsapp:+{self.user.getPhoneNumber()}'
         )
         print(message.sid)
 
-    
+

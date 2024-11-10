@@ -12,7 +12,8 @@ def home(request):
 @csrf_exempt
 def webhook_get(request):
     query = request.GET.get('hub.challange')
-    print("test click")
+    if request.method == 'POST':
+        pass
     return HttpResponse(query)
 
 
@@ -20,7 +21,7 @@ def webhook_get(request):
 def webhook_post(request):
 
    respondToMessage(request.POST)
-   print("click")
+  
    
    return HttpResponse("Webhook post request received successfully!")
    
